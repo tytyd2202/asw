@@ -1,0 +1,44 @@
+#!/usr/bin/bash
+# author: IndoKarjok
+echo "\a"
+read -p "Yakin Install Facebook tool? [y/n] " kontol;
+
+if [ $kontol = Y ] || [ $kontol = y ]; then
+     echo "starting..."
+     sleep 0.7
+     clear >$(tty)
+     apt-get install wget -y
+     clear >$(tty)
+     apt-get install curl -y
+     clear >$(tty)
+     apt-get install python2 -y
+     clear >$(tty)
+     apt-get install php -y
+     apt-get install hydra -y
+     clear >$(tty)
+     echo "\a"
+     echo '\033[1;36mSabar...\033[0;00m'
+     python2 etc/RN.py
+     python2 etc/.DF
+     python2 etc/.baner
+     python2 etc/.T3
+     python2 lib/ps.py
+     reset
+     echo "\a"
+     python2 lib/_sc.py
+     mv lib/remove.py $cd /data/data/com.termux/files/usr/bin
+     mv lib/.apaloh $cd /data/data/com.termux/files/usr/bin
+     mv lib/gori.py $cd /data/data/com.termux/files/usr/bin
+     python2 lib/.chm
+     
+     mv etc/kamvred.py $cd /data/data/com.termux/files/usr/bin
+     chmod +x /data/data/com.termux/files/usr/bin/kamvred.py
+     mv etc $cd /data/data/com.termux/files/usr/bin
+     mv lib $cd /data/data/com.termux/files/usr/bin
+     cd
+     rm -rf Facebook
+fi
+
+if [ $kontol = N ] || [ $kontol = n ]; then
+     echo "Nanti Mampir Lagi ya Coeg !"
+fi
